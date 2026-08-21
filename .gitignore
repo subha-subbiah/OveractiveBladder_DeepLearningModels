@@ -1,0 +1,18 @@
+# Python & Virtual Environment
+.venv/
+venv/
+ENV/
+__pycache__/
+*.py[cod]
+
+# Jupyter Notebook artifacts
+.ipynb_checkpoints/
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# User settings & IDE
+.vscode/
+.idea/
