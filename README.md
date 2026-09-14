@@ -71,7 +71,7 @@ All three architectures achieved strong discriminative performance with high sen
 
 ---
 
-## 🛠️ Installation & Setup
+## Installation & Setup
 
 ### 1. Prerequisites
 Ensure you have Python 3.10+ installed.
@@ -99,7 +99,7 @@ pip install pandas numpy scikit-learn imbalanced-learn tensorflow shap matplotli
 
 ---
 
-## 🚀 Execution Workflow
+## Execution Workflow
 
 To reproduce the study's pipeline:
 
@@ -111,7 +111,7 @@ To reproduce the study's pipeline:
 
 ---
 
-## 🔬 Clinical Disclaimer
+## Clinical Disclaimer
 
 This repository forms part of a methodological and population-level screening study using cross-sectional survey data. It is intended for research and educational purposes and does **not** constitute a deployment-ready clinical diagnostic tool. 
 
