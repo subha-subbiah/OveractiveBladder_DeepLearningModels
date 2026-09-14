@@ -1,16 +1,13 @@
 # A Comparative Deep Learning Study for Symptom-Based Overactive Bladder Prediction with SHAP Explainability
 
 [![Paper DOI](https://img.shields.io/badge/DOI-10.5220%2F0014996300005051-blue.svg)](https://doi.org/10.5220/0014996300005051)
-[![Conference](https://img.shields.io/badge/Conference-ABH%202026-green.svg)](https://www.scitepress.org/)
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
-[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)](https://www.tensorflow.org/)
-[![License](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+[![Conference](https://img.shields.io/badge/Conference-ABH%202026-green.svg)](https://abh.scitevents.org/Home.aspx?y=2026)
 
 Official repository for the paper: **"A Comparative Deep Learning Study for Symptom-Based Overactive Bladder Prediction with SHAP Explainability"**, published in the *Proceedings of the International Conference on Artificial Intelligence and Blockchain in Healthcare (ABH 2026)*, pages 223–236.
 
 ---
 
-## 📌 Publication & Citation
+## Publication & Citation
 
 If you use this code or findings in your research, please cite our paper:
 
@@ -21,40 +18,26 @@ If you use this code or findings in your research, please cite our paper:
 > **ISBN:** 978-989-758-856-3 | **ISSN:** 3051-8377  
 > **Publisher:** SCITEPRESS – Science and Technology Publications, Lda.
 
-```bibtex
-@inproceedings{subbiah2026overactive,
-  author    = {Subbiah, Subha and Ramachandran, Muthu},
-  title     = {A Comparative Deep Learning Study for Symptom-Based Overactive Bladder Prediction with SHAP Explainability},
-  booktitle = {Proceedings of the International Conference on Artificial Intelligence and Blockchain in Healthcare (ABH 2026)},
-  pages     = {223--236},
-  year      = {2026},
-  publisher = {SCITEPRESS},
-  isbn      = {978-989-758-856-3},
-  issn      = {3051-8377},
-  doi       = {10.5220/0014996300005051}
-}
-```
-
 ---
 
-## 📖 Overview
+## Overview
 
 Overactive Bladder (OAB) is a prevalent lower urinary tract dysfunction characterized primarily by urinary urgency, accompanied by frequency and nocturia. Early identification at a population level can facilitate timely clinical screening and improve patient quality of life.
 
 This repository provides an end-to-end explainable deep learning framework that models symptom-based OAB classification using nationally representative data from the **National Health and Nutrition Examination Survey (NHANES 2021–2023)** cycle.
 
 ### Key Contributions:
-1. **Clinical Symptom Labeling**: Formulated an operationalized OAB label based on International Continence Society (ICS) criteria (`Urgency AND (Urge Incontinence OR Nocturia)`).
+1. **Clinical Symptom Labeling**: OAB label based on International Continence Society (ICS) criteria (`Urgency AND (Urge Incontinence OR Nocturia)`).
 2. **Deep Learning Architectures**: Developed and evaluated three distinct neural network configurations:
    - **Deep Multi-Layer Perceptron (Deep MLP)**
    - **Residual Neural Network (ResNet with Skip Connections)**
    - **Wide & Deep Network (Joint Linear & Non-linear Feature Learning)**
-3. **Class Imbalance Mitigation**: Applied Synthetic Minority Over-sampling Technique (**SMOTE**) strictly on training splits to prevent data leakage.
+3. **Class Imbalance Mitigation**: Applied Synthetic Minority Over-sampling Technique (**SMOTE**).
 4. **Explainable AI (XAI)**: Integrated **SHAP (SHapley Additive exPlanations)** in logit space to deliver both global risk factor rankings and patient-level local waterfall explanations.
 
 ---
 
-## 📊 Experimental Results
+## Experimental Results
 
 All three architectures achieved strong discriminative performance with high sensitivity, ideal for screening applications where minimizing false negatives is critical.
 
@@ -70,7 +53,7 @@ All three architectures achieved strong discriminative performance with high sen
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```text
 .
@@ -126,19 +109,10 @@ To reproduce the study's pipeline:
 2. **Model Training & Evaluation**:
    Open and execute `code/models.ipynb`. This notebook splits the dataset (80/20 stratified split with `SEED=42`), applies `StandardScaler` and `SMOTE`, builds and trains the three deep learning architectures, plots performance metrics (ROC curves, confusion matrices), and computes SHAP feature importance & waterfall plots.
 
-> **Note**: Execute notebooks from within the `code/` working directory to ensure relative file paths resolve seamlessly.
-
 ---
 
 ## 🔬 Clinical Disclaimer
 
-This repository forms part of a methodological and population-level screening study using cross-sectional survey data. It is intended for research and educational purposes and does **not** constitute a deployment-ready clinical diagnostic tool. Clinical implementation warrants prospective cohort validation with physician-confirmed diagnostic ground truth.
+This repository forms part of a methodological and population-level screening study using cross-sectional survey data. It is intended for research and educational purposes and does **not** constitute a deployment-ready clinical diagnostic tool. 
 
 ---
-
-## ✉️ Contact & Acknowledgments
-
-- **Subha Subbiah** – Department of Computer Science and Engineering, PSG College of Technology, Coimbatore, India.
-- **Muthu Ramachandran** – Forti5 Tech Ltd & University of South Africa (UniSA), U.K.
-
-For questions or collaboration inquiries regarding this paper or codebase, please open an issue in this repository.
